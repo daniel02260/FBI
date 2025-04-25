@@ -1,0 +1,135 @@
+:root {
+  --primary: #002b5c;
+  --secondary: #00509d;
+  --accent: #f4a261;
+  --bg-light: #f1f5f9;
+  --text-dark: #1f2937;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: var(--bg-light);
+  color: var(--text-dark);
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  color: var(--secondary);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.tab {
+  display: none;
+  padding: 2rem;
+}
+
+.tab.active {
+  display: block;
+}
+
+input[type="text"], select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 90%;
+  max-width: 400px;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  background: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--primary);
+}
+
+#results, #filteredResults, #favoritesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: var(--secondary);
+}
+
+.card p {
+  margin: 0.3rem 0;
+}
+
+.card a {
+  background: var(--accent);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  display: inline-block;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.7rem 0;
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--secondary);
+  cursor: pointer;
+}
