@@ -14,16 +14,23 @@
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/service-worker.js')
         .then(reg => console.log('SW registrado', reg))
-        .catch(err => console.error('Error al registrar el SW', err));
     });
   }
 </script>
-<body>
-  <header>
-    <h1> Busquedas FBI</h1>
-  </header>
+<!-- ...existing code... -->
+<script>
+  function toggleMenu() {
+    document.getElementById('mainNav').classList.toggle('show');
+  }
+</script>
 
-  <nav class="tabs">
+<body>
+<header class="main-header">
+  <div class="header-content">
+    <h1>Busquedas FBI</h1>
+    <button class="menu-toggle" aria-label="Abrir menú" onclick="toggleMenu()">☰</button>
+  </div>
+  <nav class="tabs" id="mainNav">
     <button data-tab="home">Inicio</button>
     <button data-tab="search">Buscar</button>
     <button data-tab="filter">Filtrar</button>
@@ -31,6 +38,8 @@
     <button data-tab="map">Mapa</button>
     <button data-tab="info">Información</button>
   </nav>
+</header>
+
 
   <main>
     <section id="home" class="tab active">

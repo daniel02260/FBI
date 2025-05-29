@@ -1,12 +1,13 @@
-
-  const CACHE_NAME = 'picsum-app-v1';
+const CACHE_NAME = 'fbi-app-v1';
 const urlsToCache = [
- '/index.html',
-          '/css/styles.css',
-          '/js/app.js',
-          '/icons/icon-192.png',
-          '/icons/icon-512.png'
+  '/index.html',
+  '/style.css',
+  '/app.js',
+  '/manifest.json',
+  '/icons/icon-192.png',
+  '/icons/icon-512.png'
 ];
+// ...resto igual...
 
 // Instalar y cachear archivos
 self.addEventListener('install', (event) => {

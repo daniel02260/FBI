@@ -133,3 +133,71 @@ footer {
   color: var(--secondary);
   cursor: pointer;
 }
+/* ...existing code... */
+
+/* Header mejorado */
+.main-header {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .tabs {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    width: 100%;
+    background: var(--primary);
+    padding: 0;
+    box-shadow: none;
+  }
+  .tabs.show {
+    display: flex;
+  }
+  .tabs button {
+    color: white;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    border-radius: 0;
+    border-bottom: 1px solid #00336633;
+    background: none;
+  }
+  .header-content {
+    padding: 1rem;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  main {
+    padding-bottom: 4.5rem;
+    padding-top: 1rem;
+  }
+  footer {
+    font-size: 1.1rem;
+  }
+}
+
+/* Ajuste para main en desktop */
+@media (min-width: 701px) {
+  main {
+    margin-top: 1.5rem;
+    margin-bottom: 4.5rem;
+  }
+}
